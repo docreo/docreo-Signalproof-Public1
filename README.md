@@ -14,6 +14,12 @@ The current Community CLI is local-only and may communicate only with a local Ol
 
 See [PUBLIC-BOUNDARY.md](PUBLIC-BOUNDARY.md).
 
+## Signalproof CLI preview
+
+![Signalproof CLI preview](docs/assets/signalproof-cli-preview.webp)
+
+The public preview is intentionally cropped so it does not expose developer-machine filesystem locations.
+
 ## Community CLI
 
 Current exact local routes:

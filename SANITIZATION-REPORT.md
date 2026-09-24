@@ -17,11 +17,11 @@ This repository was created fresh and does not inherit Git history from the prev
 
 ## Explicitly excluded
 
-- connected-site application data, including ChudCon
+- connected-site application data and website deltas
 - private VPS/server routes and server inventories
 - SSH identities, keys, credentials, tokens, or private connectors
 - tenant/customer state
-- internal Build Ledger or Assurance evidence
+- internal development or assurance evidence
 - private model-training state
 - developer workstation paths, worktrees, quarantine/evidence paths, or mount locations
 - private-network topology

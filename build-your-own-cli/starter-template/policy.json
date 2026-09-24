@@ -1,0 +1,10 @@
+{
+  "mode": "ADVISORY_ONLY",
+  "allow_tools": false,
+  "allow_filesystem": false,
+  "allow_browser": false,
+  "allow_credentials": false,
+  "allow_remote_actions": false,
+  "allow_silent_fallback": false,
+  "allowed_hosts": ["127.0.0.1", "localhost", "::1"]
+}

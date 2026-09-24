@@ -1,0 +1,10 @@
+{
+  "model-a": {
+    "tag": "replace-with-exact-model-tag",
+    "display_name": "Model A"
+  },
+  "model-b": {
+    "tag": "replace-with-second-exact-model-tag",
+    "display_name": "Model B"
+  }
+}

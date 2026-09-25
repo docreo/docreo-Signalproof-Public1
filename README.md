@@ -16,9 +16,9 @@ See [PUBLIC-BOUNDARY.md](PUBLIC-BOUNDARY.md).
 
 ## Signalproof CLI preview
 
-![Signalproof CLI preview](docs/assets/signalproof-cli-preview.webp)
+![Signalproof CLI preview](docs/assets/signalproof-cli-preview.svg)
 
-The public preview is intentionally cropped so it does not expose developer-machine filesystem locations.
+This is a coded SVG preview using sanitized demo values and no developer-machine filesystem locations.
 
 ## Community CLI
 

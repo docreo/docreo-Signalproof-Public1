@@ -30,3 +30,10 @@ This repository was created fresh and does not inherit Git history from the prev
 ## Runtime boundary
 
 The Community CLI is local-only. It accepts only HTTP loopback model transport and has no route to private Signalproof infrastructure.
+
+## Visual-parity update (Public1 V1/RD2)
+
+- Public chat presentation and SVG preview now share the accepted gold/red wordmark and plain session layout. They do not include the rejected Sagittarius dashboard.
+- All preview identity data is generic (`LOCAL USER`); the only model shown is the publicly supported local Granite tag. Live readiness is never invented: displayed initial state is `UNVERIFIED`.
+- Public-only command vocabulary and `SP://COMMUNITY` are used. No protected Signal Keys, private Orchestrator implementation, infrastructure details, private logs or developer paths were imported.
+- Public policy remains advisory-only and loopback-only; existing exact-route and transport code remains unchanged.

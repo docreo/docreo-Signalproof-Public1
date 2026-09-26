@@ -18,7 +18,7 @@ See [PUBLIC-BOUNDARY.md](PUBLIC-BOUNDARY.md).
 
 ![Signalproof CLI preview](docs/assets/signalproof-cli-preview.svg)
 
-This is a coded SVG preview using sanitized demo values and no developer-machine filesystem locations.
+This sanitized SVG illustrates the **actual Community CLI interactive `chat granite` presentation**: the owner-accepted six-row Signalproof wordmark, gold/red dividers and plain session details, using only public local-demo values. The public heading is `SIGNALPROOF COMMUNITY CLI`, not the private Orchestrator. Public1 does not inherit private Signal Keys, internal routing, installation evidence, accounts or server access.
 
 ## Community CLI
 

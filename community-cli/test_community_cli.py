@@ -1,6 +1,9 @@
 from __future__ import annotations
 
 import importlib.util
+import io
+import os
+from contextlib import redirect_stdout
 import sys
 import unittest
 from pathlib import Path
@@ -52,6 +55,38 @@ class CommunityCliTests(unittest.TestCase):
             run.return_value.returncode = 0
             MODULE.pull_model(spec)
             run.assert_called_once_with(["/usr/bin/ollama", "pull", "granite4.2:8b"], check=False)
+
+
+    def test_accepted_plain_public_visual(self):
+        result = MODULE.render_community_header("granite", columns=120, ansi=False)
+        self.assertIn("SIGNALPROOF COMMUNITY CLI", result)
+        self.assertIn("SP://COMMUNITY", result)
+        self.assertIn("granite4.2:8b", result)
+        self.assertIn("LOOPBACK ONLY", result)
+        self.assertIn("UNVERIFIED", result)
+        self.assertEqual(sum("███████" in line for line in result.splitlines()) >= 1, True)
+        self.assertNotIn("\x1b", result)
+        self.assertNotIn("GAdmin", result)
+
+    def test_chat_uses_public_header_and_accurate_commands(self):
+        out = io.StringIO()
+        args = MODULE.build_parser().parse_args(["chat", "qwen"])
+        with patch("builtins.input", side_effect=["/exit"]) as read, redirect_stdout(out):
+            self.assertEqual(args.func(args), 0)
+        shown = out.getvalue()
+        self.assertIn("SIGNALPROOF COMMUNITY CLI", shown)
+        self.assertIn("qwen3.6:latest", shown)
+        self.assertIn("Commands: /exit  /quit", shown)
+        read.assert_called_once_with("YOU [qwen] > ")
+
+    def test_narrow_and_color_modes(self):
+        short = MODULE.render_community_header("qwen", columns=55, ansi=False)
+        self.assertNotIn("███████", short)
+        self.assertIn("SIGNALPROOF", short)
+        bright = MODULE.render_community_header("qwen", columns=120, ansi=True)
+        self.assertIn("\x1b[", bright)
+        self.assertIn("HUMAN-CONTROLLED AI SYSTEMS", bright)
+        self.assertNotIn("READY", bright)  # Display only; no invented live state.
 
 
 if __name__ == "__main__":

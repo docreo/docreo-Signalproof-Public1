@@ -34,6 +34,72 @@ class CommunityError(RuntimeError):
     pass
 
 
+# Public-owned presentation data only. This uses no private CLI package,
+# protected route, Signal Keys credential or internal installation state.
+PUBLIC_WORDMARK = (
+    "███████╗ ██╗  ██████╗  ███╗   ██╗  █████╗  ██╗      ██████╗  ██████╗   ██████╗   ██████╗  ███████╗",
+    "██╔════╝ ██║ ██╔════╝  ████╗  ██║ ██╔══██╗ ██║      ██╔══██╗ ██╔══██╗ ██╔═══██╗ ██╔═══██╗ ██╔════╝",
+    "███████╗ ██║ ██║  ███╗ ██╔██╗ ██║ ███████║ ██║      ██████╔╝ ██████╔╝ ██║   ██║ ██║   ██║ █████╗",
+    "╚════██║ ██║ ██║   ██║ ██║╚██╗██║ ██╔══██║ ██║      ██╔═══╝  ██╔══██╗ ██║   ██║ ██║   ██║ ██╔══╝",
+    "███████║ ██║ ╚██████╔╝ ██║ ╚████║ ██║  ██║ ███████╗ ██║      ██║  ██║ ╚██████╔╝ ╚██████╔╝ ██║",
+    "╚══════╝ ╚═╝  ╚═════╝  ╚═╝  ╚═══╝ ╚═╝  ╚═╝ ╚══════╝ ╚═╝      ╚═╝  ╚═╝  ╚═════╝   ╚═════╝  ╚═╝",
+)
+PUBLIC_ROW_COLORS = (
+    "\x1b[1;38;2;255;228;86m",
+    "\x1b[1;38;2;255;222;73m",
+    "\x1b[38;2;255;204;41m",
+    "\x1b[38;2;255;192;55m",
+    "\x1b[38;2;207;136;55m",
+    "\x1b[38;2;189;116;44m",
+)
+
+
+def render_community_header(alias: str, *, columns: int | None = None,
+                            ansi: bool | None = None) -> str:
+    """Owner-accepted plain CLI visual structure, using public local facts only."""
+    if alias not in SUPPORTED_MODELS:
+        raise ValueError("unsupported public model alias")
+    if columns is None:
+        columns = shutil.get_terminal_size(fallback=(100, 30)).columns
+    columns = max(1, int(columns))
+    if ansi is None:
+        ansi = bool(getattr(sys.stdout, "isatty", lambda: False)()) and (
+            "NO_COLOR" not in os.environ and os.environ.get("TERM", "") != "dumb"
+        )
+    reset = "\x1b[0m" if ansi else ""
+    red = "\x1b[38;2;227;24;53m" if ansi else ""
+    gold = "\x1b[1;38;2;255;211;49m" if ansi else ""
+    rows = []
+    if columns >= max(map(len, PUBLIC_WORDMARK)):
+        rows.extend(
+            (PUBLIC_ROW_COLORS[i] + line + reset) if ansi else line
+            for i, line in enumerate(PUBLIC_WORDMARK)
+        )
+    else:
+        rows.append(gold + "SIGNALPROOF" + reset)
+    bar = red + ("═" * min(columns, 100)) + reset
+    rows.extend((
+        bar,
+        gold + "SIGNALPROOF" + reset + "  " + red + "//" + reset
+        + "  " + gold + "HUMAN-CONTROLLED AI SYSTEMS" + reset,
+        red + "SP://COMMUNITY" + reset + "  //  "
+        + gold + "COMMUNITY " + VERSION + reset + "  //  LOCAL ONLY",
+        bar,
+        "",
+        " SIGNALPROOF COMMUNITY CLI",
+        " OPERATOR     LOCAL USER",
+        " TRANSPORT    LOOPBACK ONLY",
+        " ROUTE        " + alias,
+        " MODEL        " + SUPPORTED_MODELS[alias].tag,
+        " STATE        UNVERIFIED (checked on first prompt)",
+        "",
+        "Commands: /exit  /quit",
+        "No silent model failover. Advisory-only; no tool authority.",
+    ))
+    return "\n".join(rows)
+
+
+
 def require_loopback(url: str) -> None:
     parsed = urlparse(url)
     if parsed.scheme != "http" or parsed.hostname not in {"127.0.0.1", "localhost", "::1"}:
@@ -237,11 +303,10 @@ def cmd_ask(args) -> int:
 
 
 def cmd_chat(args) -> int:
-    print(f"{PRODUCT} {VERSION} | {SUPPORTED_MODELS[args.model].display_name}")
-    print("NON_EXECUTING_ADVISORY | /exit to quit")
+    print(render_community_header(args.model))
     while True:
         try:
-            prompt = input("You > ").strip()
+            prompt = input(f"YOU [{args.model}] > ").strip()
         except (EOFError, KeyboardInterrupt):
             print()
             break

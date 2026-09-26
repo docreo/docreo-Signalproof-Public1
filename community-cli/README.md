@@ -55,6 +55,10 @@ ollama pull qwen3.6:latest
 ollama pull granite4.2:8b
 ```
 
+## Accepted plain terminal presentation
+
+Interactive `chat` now uses the same gold/red six-row Signalproof wordmark and uncluttered status layout as the owner-accepted private CLI design. This public presentation is implemented independently and displays **only real public-edition capabilities**: the explicitly selected local Qwen or Granite route, loopback-only transport and an unverified state until a request checks the local runtime. It does not implement the private Orchestrator, Signal Keys or private server connections. On narrow terminals the banner becomes a single-line wordmark; `NO_COLOR=1` disables ANSI styling. JSON and machine-readable commands are unchanged.
+
 ## Use
 
 ```text

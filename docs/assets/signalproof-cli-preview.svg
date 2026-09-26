@@ -1,38 +1,49 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="900" viewBox="0 0 1500 900">
-  <rect width="1500" height="900" fill="#050505"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="1320" height="750" viewBox="0 0 1320 750" role="img" aria-labelledby="title desc">
+  <title id="title">Signalproof Public1 Community CLI plain terminal preview</title>
+  <desc id="desc">Sanitized preview of Community CLI chat granite: six-row gold Unicode SIGNALPROOF wordmark, red dividers and plain public-only status lines. No private Orchestrator, private identity, Sagittarius art or framed dashboard.</desc>
+  <rect width="1320" height="750" fill="#101010"/>
   <style>
-    .mono{font-family:Consolas,'Courier New',monospace}.gold{fill:#ffdc5f}.gold2{fill:#ffc425}.red{fill:#dc1423}.deep{fill:#960014}.warm{fill:#f5eedc}.b{font-weight:700}
+    .mono{font-family:"Cascadia Mono",Consolas,"DejaVu Sans Mono",monospace}
+    .banner{font-size:18px;font-weight:800;letter-spacing:0;white-space:pre}
+    .normal{font-size:20px;fill:#e6e6e6;font-weight:650}
+    .header{font-size:19px;fill:#ffdb32;font-weight:700}
+    .small{font-size:18px;fill:#dedede;font-weight:600}
   </style>
-  <text class="mono gold b" x="46" y="82" font-size="33">  _____ ___ ____ _   _    _    _     ____  ____    ___   ___  _____</text>
-  <text class="mono gold b" x="46" y="122" font-size="33"> / ____|_ _/ ___| \ | |  / \  | |   |  _ \|  _ \ / _ \ / _ \|  ___|</text>
-  <text class="mono gold b" x="46" y="162" font-size="33"> \___ \ | | |  _|  \| | / _ \ | |   | |_) | |_) | | | | | | | |_</text>
-  <text class="mono gold b" x="46" y="202" font-size="33">  ___) || | |_| | |\  |/ ___ \| |___|  __/|  _  | |_| | |_| |  _|</text>
-  <text class="mono gold b" x="46" y="242" font-size="33"> |____/|___\____|_| \_/_/   \_\_____|_|   |_| \__\___/ \___/|_|</text>
-  <line x1="46" y1="264" x2="1450" y2="264" stroke="#dc1423" stroke-width="3"/>
-  <text class="mono gold2 b" x="46" y="304" font-size="21">SIGNALPROOF  //  HUMAN-CONTROLLED AI SYSTEMS</text>
-  <text class="mono red b" x="46" y="342" font-size="21">SP://CONTROL-PLANE</text>
-  <text class="mono deep b" x="290" y="342" font-size="21">//</text>
-  <text class="mono gold b" x="340" y="342" font-size="21">V1/RD1</text>
-  <text class="mono deep b" x="440" y="342" font-size="21">//</text>
-  <text class="mono gold2 b" x="490" y="342" font-size="21">SIGNAL KEYS</text>
-  <text class="mono deep b" x="640" y="342" font-size="21">//</text>
-  <text class="mono warm b" x="690" y="342" font-size="21">PROVIDER-NEUTRAL</text>
-  <line x1="46" y1="367" x2="1450" y2="367" stroke="#dc1423" stroke-width="3"/>
-
-  <rect x="46" y="405" width="1040" height="352" rx="10" fill="none" stroke="#dc1423" stroke-width="3"/>
-  <rect x="430" y="393" width="295" height="30" fill="#050505"/>
-  <text class="mono gold2 b" x="451" y="417" font-size="21">SIGNALPROOF RUNTIME</text>
-
-  <g class="mono" font-size="21">
-    <text class="red b" x="76" y="470">OPERATOR</text><text class="warm" x="296" y="470">demo-user</text>
-    <text class="red b" x="76" y="515">PROVIDER</text><text class="warm" x="296" y="515">openai</text>
-    <text class="red b" x="76" y="560">MODEL</text><text class="gold" x="296" y="560">gpt-5.6-terra</text>
-    <text class="red b" x="76" y="605">SIGNAL KEYS</text><text class="gold2" x="296" y="605">BOUND</text>
-    <text class="red b" x="76" y="650">CONNECTION</text><text class="warm" x="296" y="650">conn_demo...</text>
-    <text class="red b" x="76" y="695">TOOLSETS</text><text class="warm" x="296" y="695">6 ACTIVE</text>
-    <text class="red b" x="76" y="740">STATE</text><text class="gold2" x="296" y="740">CONNECTED</text>
+  <text xml:space="preserve" class="mono banner" x="28" y="68" fill="#57301b" opacity=".8" transform="translate(2,4)">███████╗ ██╗  ██████╗  ███╗   ██╗  █████╗  ██╗      ██████╗  ██████╗   ██████╗   ██████╗  ███████╗</text>
+  <text xml:space="preserve" class="mono banner" x="28" y="68" fill="#ffe456">███████╗ ██╗  ██████╗  ███╗   ██╗  █████╗  ██╗      ██████╗  ██████╗   ██████╗   ██████╗  ███████╗</text>
+  <text xml:space="preserve" class="mono banner" x="28" y="97" fill="#57301b" opacity=".8" transform="translate(2,4)">██╔════╝ ██║ ██╔════╝  ████╗  ██║ ██╔══██╗ ██║      ██╔══██╗ ██╔══██╗ ██╔═══██╗ ██╔═══██╗ ██╔════╝</text>
+  <text xml:space="preserve" class="mono banner" x="28" y="97" fill="#ffdf49">██╔════╝ ██║ ██╔════╝  ████╗  ██║ ██╔══██╗ ██║      ██╔══██╗ ██╔══██╗ ██╔═══██╗ ██╔═══██╗ ██╔════╝</text>
+  <text xml:space="preserve" class="mono banner" x="28" y="126" fill="#57301b" opacity=".8" transform="translate(2,4)">███████╗ ██║ ██║  ███╗ ██╔██╗ ██║ ███████║ ██║      ██████╔╝ ██████╔╝ ██║   ██║ ██║   ██║ █████╗</text>
+  <text xml:space="preserve" class="mono banner" x="28" y="126" fill="#ffcc29">███████╗ ██║ ██║  ███╗ ██╔██╗ ██║ ███████║ ██║      ██████╔╝ ██████╔╝ ██║   ██║ ██║   ██║ █████╗</text>
+  <text xml:space="preserve" class="mono banner" x="28" y="155" fill="#57301b" opacity=".8" transform="translate(2,4)">╚════██║ ██║ ██║   ██║ ██║╚██╗██║ ██╔══██║ ██║      ██╔═══╝  ██╔══██╗ ██║   ██║ ██║   ██║ ██╔══╝</text>
+  <text xml:space="preserve" class="mono banner" x="28" y="155" fill="#ffc037">╚════██║ ██║ ██║   ██║ ██║╚██╗██║ ██╔══██║ ██║      ██╔═══╝  ██╔══██╗ ██║   ██║ ██║   ██║ ██╔══╝</text>
+  <text xml:space="preserve" class="mono banner" x="28" y="184" fill="#57301b" opacity=".8" transform="translate(2,4)">███████║ ██║ ╚██████╔╝ ██║ ╚████║ ██║  ██║ ███████╗ ██║      ██║  ██║ ╚██████╔╝ ╚██████╔╝ ██║</text>
+  <text xml:space="preserve" class="mono banner" x="28" y="184" fill="#cf8837">███████║ ██║ ╚██████╔╝ ██║ ╚████║ ██║  ██║ ███████╗ ██║      ██║  ██║ ╚██████╔╝ ╚██████╔╝ ██║</text>
+  <text xml:space="preserve" class="mono banner" x="28" y="213" fill="#57301b" opacity=".8" transform="translate(2,4)">╚══════╝ ╚═╝  ╚═════╝  ╚═╝  ╚═══╝ ╚═╝  ╚═╝ ╚══════╝ ╚═╝      ╚═╝  ╚═╝  ╚═════╝   ╚═════╝  ╚═╝</text>
+  <text xml:space="preserve" class="mono banner" x="28" y="213" fill="#bd742c">╚══════╝ ╚═╝  ╚═════╝  ╚═╝  ╚═══╝ ╚═╝  ╚═╝ ╚══════╝ ╚═╝      ╚═╝  ╚═╝  ╚═════╝   ╚═════╝  ╚═╝</text>
+  <path d="M 24 254 H 1266 M 24 259 H 1266 M 24 329 H 1266 M 24 334 H 1266" stroke="#e51d37" stroke-width="2" fill="none"/>
+  <text class="mono header" x="28" y="287">SIGNALPROOF</text>
+  <text class="mono header" x="198" y="287" style="fill:#f22747">//</text>
+  <text class="mono header" x="249" y="287">HUMAN-CONTROLLED AI SYSTEMS</text>
+  <text class="mono header" x="28" y="319" style="fill:#f22747">SP://COMMUNITY</text>
+  <text class="mono small" x="229" y="319">//</text>
+  <text class="mono header" x="273" y="319">COMMUNITY 0.2.0</text>
+  <text class="mono small" x="507" y="319">//</text>
+  <text class="mono header" x="553" y="319">LOCAL ONLY</text>
+  <g class="mono normal" xml:space="preserve">
+    <text x="36" y="385">SIGNALPROOF COMMUNITY CLI</text>
+    <text x="36" y="414">OPERATOR     LOCAL USER</text>
+    <text x="36" y="443">TRANSPORT    LOOPBACK ONLY</text>
+    <text x="36" y="472">ROUTE        granite</text>
+    <text x="36" y="501">MODEL        granite4.2:8b</text>
+    <text x="36" y="530">STATE        UNVERIFIED (checked on first prompt)</text>
   </g>
-
-  <text class="mono warm" x="46" y="814" font-size="18">Sanitized public preview — demo identity and connection values only.</text>
-  <text class="mono gold2 b" x="46" y="850" font-size="18">SIGNALPROOF CLI PREVIEW</text>
+  <g class="mono small">
+    <text x="32" y="593">Commands: /exit  /quit</text>
+    <text x="32" y="623">No silent model failover. Advisory-only; no tool authority.</text>
+  </g>
+  <text class="mono normal" x="32" y="657" style="fill:#43cf75">YOU</text>
+  <text class="mono normal" x="87" y="657" style="fill:#9d9d9d">[granite]</text>
+  <text class="mono normal" x="200" y="657" style="fill:#43cf75">&gt;</text>
+  <rect x="225" y="640" width="2" height="23" fill="#dedede"/>
 </svg>
